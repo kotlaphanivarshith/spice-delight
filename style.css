@@ -1,0 +1,499 @@
+/* ===========================
+   GOOGLE RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+    line-height:1.6;
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#ffb703;
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffb703;
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    height:100vh;
+
+    background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+    center center/cover;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.60);
+}
+
+.hero-content{
+    position:relative;
+    color:white;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:40px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#ffb703;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#fb8500;
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    width:90%;
+
+    margin:100px auto;
+
+    display:flex;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    color:#fb8500;
+
+}
+
+.about-text p{
+
+    margin-bottom:15px;
+
+    color:#555;
+
+}
+
+
+/* ===========================
+   MENU
+=========================== */
+
+.menu{
+
+    padding:90px 5%;
+
+    background:white;
+
+}
+
+.menu h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    color:#fb8500;
+
+}
+
+.menu-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    padding:15px 20px 10px;
+
+}
+
+.card p{
+
+    padding:0 20px;
+
+    color:#666;
+
+}
+
+.card h4{
+
+    padding:20px;
+
+    color:#fb8500;
+
+    font-size:22px;
+
+}
+
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+.reviews{
+
+    padding:100px 5%;
+
+}
+
+.reviews h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    color:#fb8500;
+
+}
+
+.review-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.review-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.review-card h3{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.review-card h4{
+
+    margin-top:20px;
+
+    color:#fb8500;
+
+}
+
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    padding:100px 5%;
+
+    text-align:center;
+
+    background:#1e1e1e;
+
+    color:white;
+
+}
+
+.contact h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    color:#ffb703;
+
+}
+
+.contact p{
+
+    margin:15px 0;
+
+    font-size:20px;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:black;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+footer h3{
+
+    color:#ffb703;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+    }
+
+    .nav-links{
+
+        margin-top:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .nav-links li{
+
+        margin:10px 15px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+    }
+
+    .about{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-content h1{
+
+        font-size:32px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .btn{
+
+        padding:12px 28px;
+
+    }
+
+    .menu h2,
+    .about-text h2,
+    .reviews h2,
+    .contact h2{
+
+        font-size:32px;
+
+    }
+
+}
