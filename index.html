@@ -348,7 +348,7 @@
 <script>
 
 emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY"
+    publicKey: "B0FT-kgTJ9qjA6byY"
 });
 
 const contactForm = document.getElementById("contact-form");
@@ -356,6 +356,26 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", function(event){
 
     event.preventDefault();
+
+    emailjs.sendForm(
+        "service_zxvbotc",
+        "template_8o0mv01",
+        this
+    )
+    .then(function(){
+
+        alert("✅ Message Sent Successfully!");
+
+        contactForm.reset();
+
+    })
+    .catch(function(error){
+
+        alert("❌ Failed to send message.");
+
+        console.log(error);
+
+    });
 
 });
 
